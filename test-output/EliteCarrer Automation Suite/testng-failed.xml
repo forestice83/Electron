@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="2" name="Failed suite [EliteCarrer Automation Suite]">
+  <test name="EliteCareer Regression Test">
+    <packages>
+      <package name="tests"/>
+    </packages>
+    <classes>
+      <class name="tests.TestJobSearchPage"/>
+      <class name="tests.TestRegistrationPage"/>
+      <class name="tests.TestSigninPage"/>
+    </classes>
+  </test> <!-- EliteCareer Regression Test -->
+  <test name="EliteCareer Regression Test(failed)">
+    <classes>
+      <class name="tests.TestSigninPage">
+        <methods>
+          <include name="classSetUp"/>
+          <include name="classTearDown"/>
+        </methods>
+      </class> <!-- tests.TestSigninPage -->
+      <class name="tests.TestRegistrationPage">
+        <methods>
+          <include name="testDateOfBirthwithInValidCredential"/>
+          <include name="testFirstNameWithNumericData"/>
+          <include name="classSetUp"/>
+          <include name="testlastNameWithNumericData"/>
+          <include name="classTearDown"/>
+        </methods>
+      </class> <!-- tests.TestRegistrationPage -->
+      <class name="tests.TestJobSearchPage">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="classSetUp"/>
+          <include name="classTearDown"/>
+        </methods>
+      </class> <!-- tests.TestJobSearchPage -->
+    </classes>
+  </test> <!-- EliteCareer Regression Test(failed) -->
+</suite> <!-- Failed suite [EliteCarrer Automation Suite] -->
